@@ -6,9 +6,24 @@ $font: Helvetica, sans-serif;
 body {
     font-size: 11px;
     font-family: $font;
+
+    text-align: center;
+}
+
+main {
+    padding: 15px 15px 10px;
 }
 
 .product-images {
+    article {
+        /* Creates some vertical padding on each image */
+        margin: 15px 0;
+
+        @media screen and (min-width: 768px) {
+            position: relative;
+        }
+    }
+
     a {
         /* transitions to semi-transparent on hover */
         transition: opacity .25s ease-in-out;
@@ -20,9 +35,6 @@ body {
         }
 
         img {
-            /* Creates some vertical padding on each image */
-            padding: 15px 0;
-
             /* Responsive images */
             width: 100%;
         }
@@ -34,8 +46,46 @@ body {
     margin-top: 10px;
 
     a {
+        color: $primary-color;
         text-decoration: none;
 
+        letter-spacing: 1px;
+
+        padding-bottom: 1px;
         border-bottom: 1px solid #aaa;
+
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+
+        @media screen and (min-width: 768px) {
+            background-color: white;
+            opacity: .9;
+            padding: 8px 28px;
+
+            border-bottom: none;
+
+            &:hover {
+                border-bottom: none;
+                opacity: 1;
+            }
+        }
     }
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        display: inline-block;
+
+        bottom: 7%;
+        left: 0;
+        right: 0;
+
+        margin: 0 auto;
+
+        text-transform: uppercase;
+    }
+}
+
+.hover {
+    opacity: .7;
 }
