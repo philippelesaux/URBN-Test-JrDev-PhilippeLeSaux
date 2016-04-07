@@ -1,7 +1,14 @@
-.product-images img {
-  /* Creates some vertical padding on each image */
-  padding: 10px 0;
-  /* Responsive images */
-  width: 100%; }
+.product-images a {
+  /* transitions to semi-transparent on hover */
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webit-transition: opacity .25s ease-in-out; }
+  .product-images a:hover {
+    opacity: .7; }
+  .product-images a img {
+    /* Creates some vertical padding on each image */
+    padding: 15px 0;
+    /* Responsive images */
+    width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
