@@ -1,4 +1,7 @@
 .product-images img {
-  padding: 10px 0; }
+  /* Creates some vertical padding on each image */
+  padding: 10px 0;
+  /* Responsive images */
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
