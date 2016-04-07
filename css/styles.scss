@@ -4,6 +4,7 @@ $secondary-color: #222;
 $font: Helvetica, sans-serif;
 
 body {
+    /* base styles */
     font-size: 11px;
     font-family: $font;
 
@@ -15,9 +16,15 @@ main {
 }
 
 a {
+    /* base link styles */
     color: $primary-color;
     text-decoration: none;
     letter-spacing: 1px;
+
+    &:hover {
+        /* Maintain color on hover */
+        color: $primary-color;
+    }
 }
 
 .product-images {
@@ -25,9 +32,9 @@ a {
         /* Creates some vertical padding on each image */
         margin: 15px 0;
 
-        @media screen and (min-width: 768px) {
-            position: relative;
-        }
+        // @media screen and (min-width: 768px) {
+        //     position: relative;
+        // }
     }
 
     .image {
@@ -44,19 +51,25 @@ a {
 }
 
 .shop-link {
-    display: block;
     margin-top: 10px;
 
     a {
         padding-bottom: 1px;
         border-bottom: 1px solid #aaa;
 
-        color: $secondary-color;
+        &:hover {
+            /* Some hover indication */
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
 
         @media screen and (min-width: 768px) {
+            /* Changes the shop button for tablets and desktop */
             background-color: white;
             opacity: .9;
             padding: 8px 28px;
+
+            color: $secondary-color;
 
             border-bottom: none;
 
@@ -69,6 +82,7 @@ a {
     }
 
     @media screen and (min-width: 768px) {
+        /* moves the shop button on tablets and desktop */
         position: absolute;
         display: inline-block;
 

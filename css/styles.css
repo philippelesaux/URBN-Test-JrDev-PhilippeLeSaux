@@ -1,4 +1,5 @@
 body {
+  /* base styles */
   font-size: 11px;
   font-family: Helvetica, sans-serif;
   text-align: center; }
@@ -7,16 +8,17 @@ main {
   padding: 15px 15px 10px; }
 
 a {
+  /* base link styles */
   color: #888;
   text-decoration: none;
   letter-spacing: 1px; }
+  a:hover {
+    /* Maintain color on hover */
+    color: #888; }
 
 .product-images article {
   /* Creates some vertical padding on each image */
   margin: 15px 0; }
-  @media screen and (min-width: 768px) {
-    .product-images article {
-      position: relative; } }
 .product-images .image {
   /* transitions to semi-transparent on hover */
   transition: opacity .25s ease-in-out;
@@ -27,17 +29,21 @@ a {
     width: 100%; }
 
 .shop-link {
-  display: block;
   margin-top: 10px; }
   .shop-link a {
     padding-bottom: 1px;
-    border-bottom: 1px solid #aaa;
-    color: #222; }
+    border-bottom: 1px solid #aaa; }
+    .shop-link a:hover {
+      /* Some hover indication */
+      text-decoration: none;
+      border-bottom: 1px solid transparent; }
     @media screen and (min-width: 768px) {
       .shop-link a {
+        /* Changes the shop button for tablets and desktop */
         background-color: white;
         opacity: .9;
         padding: 8px 28px;
+        color: #222;
         border-bottom: none; }
         .shop-link a:hover {
           text-decoration: none;
@@ -45,6 +51,7 @@ a {
           opacity: 1; } }
   @media screen and (min-width: 768px) {
     .shop-link {
+      /* moves the shop button on tablets and desktop */
       position: absolute;
       display: inline-block;
       bottom: 7%;
