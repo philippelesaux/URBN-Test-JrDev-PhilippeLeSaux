@@ -1,3 +1,13 @@
+$primary-color: #888;
+$secondary-color: #222;
+
+$font: Helvetica, sans-serif;
+
+body {
+    font-size: 11px;
+    font-family: $font;
+}
+
 .product-images {
     a {
         /* transitions to semi-transparent on hover */
@@ -16,5 +26,16 @@
             /* Responsive images */
             width: 100%;
         }
+    }
+}
+
+.shop-link {
+    display: block;
+    margin-top: 10px;
+
+    a {
+        text-decoration: none;
+
+        border-bottom: 1px solid #aaa;
     }
 }
