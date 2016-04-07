@@ -1,18 +1,11 @@
 $(function() {
-    $(".image")
+    // Maintains hover state when mouse enters the image anchor tag
+    $("article")
         .mouseover(function() {
-            $(this).addClass("hover");
+            $(this).find(".image").addClass("hover");
         })
         .mouseout(function() {
-            $(this).removeClass("hover");
-        })
-    ;
-    $(".shop-link")
-        .mouseover(function() {
-            $(".image").addClass("hover");
-        })
-        .mouseout(function() {
-            $(".image").removeClass("hover");
+            $(this).find(".image").removeClass("hover");
         })
     ;
 });
